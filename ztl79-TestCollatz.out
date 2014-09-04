@@ -1,0 +1,302 @@
+Running main() from gtest_main.cc
+[==========] Running 22 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 22 tests from Collatz
+[ RUN      ] Collatz.put_cache_value_1
+[       OK ] Collatz.put_cache_value_1 (64 ms)
+[ RUN      ] Collatz.put_cache_value_2
+[       OK ] Collatz.put_cache_value_2 (59 ms)
+[ RUN      ] Collatz.put_cache_value_3
+[       OK ] Collatz.put_cache_value_3 (59 ms)
+[ RUN      ] Collatz.get_cache_value_1
+[       OK ] Collatz.get_cache_value_1 (58 ms)
+[ RUN      ] Collatz.get_cache_value_2
+[       OK ] Collatz.get_cache_value_2 (64 ms)
+[ RUN      ] Collatz.get_cache_value_3
+[       OK ] Collatz.get_cache_value_3 (59 ms)
+[ RUN      ] Collatz.read_1
+[       OK ] Collatz.read_1 (0 ms)
+[ RUN      ] Collatz.read_2
+[       OK ] Collatz.read_2 (0 ms)
+[ RUN      ] Collatz.read_3
+[       OK ] Collatz.read_3 (0 ms)
+[ RUN      ] Collatz.read_4
+[       OK ] Collatz.read_4 (0 ms)
+[ RUN      ] Collatz.cycle_length_1
+[       OK ] Collatz.cycle_length_1 (0 ms)
+[ RUN      ] Collatz.cycle_length_2
+[       OK ] Collatz.cycle_length_2 (0 ms)
+[ RUN      ] Collatz.cycle_length_3
+[       OK ] Collatz.cycle_length_3 (0 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (0 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (0 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (0 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (0 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (0 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (0 ms)
+[ RUN      ] Collatz.solve_1
+[       OK ] Collatz.solve_1 (0 ms)
+[ RUN      ] Collatz.solve_2
+[       OK ] Collatz.solve_2 (0 ms)
+[ RUN      ] Collatz.solve_3
+[       OK ] Collatz.solve_3 (0 ms)
+[----------] 22 tests from Collatz (363 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test case ran. (364 ms total)
+[  PASSED  ] 22 tests.
+File 'Collatz.c++'
+Lines executed:98.59% of 71
+Branches executed:100.00% of 38
+Taken at least once:86.84% of 38
+No calls
+Collatz.c++:creating 'Collatz.c++.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm'
+Lines executed:100.00% of 3
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm:creating 'algorithm.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf'
+Lines executed:100.00% of 1
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf:creating 'streambuf.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator'
+Lines executed:100.00% of 2
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator:creating 'iterator.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios'
+Lines executed:77.78% of 18
+Branches executed:100.00% of 6
+Taken at least once:66.67% of 6
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios:creating 'ios.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__functional_base'
+Lines executed:0.00% of 1
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__functional_base:creating '__functional_base.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__locale'
+Lines executed:100.00% of 2
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__locale:creating '__locale.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale'
+Lines executed:53.57% of 28
+Branches executed:57.14% of 21
+Taken at least once:28.57% of 21
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:creating 'locale.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits'
+Lines executed:100.00% of 2
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits:creating 'limits.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector'
+Lines executed:95.12% of 41
+Branches executed:100.00% of 24
+Taken at least once:58.33% of 24
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector:creating 'vector.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/utility'
+Lines executed:100.00% of 7
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/utility:creating 'utility.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/string'
+Lines executed:27.27% of 11
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/string:creating 'string.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits'
+Lines executed:100.00% of 1
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits:creating 'type_traits.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory'
+Lines executed:90.00% of 30
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory:creating 'memory.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream'
+Lines executed:77.78% of 18
+Branches executed:75.00% of 24
+Taken at least once:37.50% of 24
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:creating 'ostream.gcov'
+
+File 'TestCollatz.c++'
+Lines executed:98.10% of 105
+Branches executed:63.51% of 570
+Taken at least once:32.46% of 570
+No calls
+TestCollatz.c++:creating 'TestCollatz.c++.gcov'
+
+File '/usr/include/gtest/gtest-printers.h'
+Lines executed:0.00% of 23
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+No calls
+/usr/include/gtest/gtest-printers.h:creating 'gtest-printers.h.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm'
+Lines executed:60.00% of 5
+Branches executed:50.00% of 4
+Taken at least once:25.00% of 4
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm:creating 'algorithm.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf'
+Lines executed:90.48% of 21
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf:creating 'streambuf.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator'
+Lines executed:40.00% of 5
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator:creating 'iterator.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__functional_base'
+Lines executed:100.00% of 1
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__functional_base:creating '__functional_base.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iosfwd'
+Lines executed:100.00% of 4
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iosfwd:creating 'iosfwd.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios'
+Lines executed:34.78% of 23
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios:creating 'ios.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__locale'
+Lines executed:0.00% of 2
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__locale:creating '__locale.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale'
+Lines executed:0.00% of 28
+Branches executed:0.00% of 21
+Taken at least once:0.00% of 21
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:creating 'locale.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits'
+Lines executed:0.00% of 2
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits:creating 'limits.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector'
+Lines executed:0.00% of 36
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector:creating 'vector.gcov'
+
+File '/usr/include/gtest/gtest-message.h'
+Lines executed:50.00% of 8
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+No calls
+/usr/include/gtest/gtest-message.h:creating 'gtest-message.h.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream'
+Lines executed:60.00% of 5
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:creating 'istream.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/string'
+Lines executed:81.69% of 71
+Branches executed:90.00% of 20
+Taken at least once:75.00% of 20
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/string:creating 'string.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits'
+Lines executed:100.00% of 1
+No branches
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits:creating 'type_traits.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory'
+Lines executed:62.50% of 32
+Branches executed:33.33% of 6
+Taken at least once:16.67% of 6
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory:creating 'memory.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream'
+Lines executed:8.57% of 35
+Branches executed:0.00% of 46
+Taken at least once:0.00% of 46
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:creating 'ostream.gcov'
+
+File '/usr/include/gtest/internal/gtest-internal.h'
+Lines executed:80.00% of 5
+Branches executed:100.00% of 44
+Taken at least once:50.00% of 44
+No calls
+/usr/include/gtest/internal/gtest-internal.h:creating 'gtest-internal.h.gcov'
+
+File '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/sstream'
+Lines executed:49.18% of 122
+Branches executed:52.94% of 102
+Taken at least once:30.39% of 102
+No calls
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/sstream:creating 'sstream.gcov'
+
+File '/usr/include/gtest/internal/gtest-port.h'
+Lines executed:81.82% of 11
+Branches executed:75.00% of 16
+Taken at least once:37.50% of 16
+No calls
+/usr/include/gtest/internal/gtest-port.h:creating 'gtest-port.h.gcov'
+
+File '/usr/include/gtest/gtest.h'
+Lines executed:37.04% of 27
+Branches executed:15.00% of 80
+Taken at least once:7.50% of 80
+No calls
+/usr/include/gtest/gtest.h:creating 'gtest.h.gcov'
+
