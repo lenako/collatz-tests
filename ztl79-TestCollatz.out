@@ -1,56 +1,210 @@
+==64278== Memcheck, a memory error detector
+==64278== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==64278== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==64278== Command: ./TestCollatz
+==64278== 
+==64278== WARNING: Support on MacOS 10.8/10.9 is experimental and mostly broken.
+==64278== WARNING: Expect incorrect results, assertions and crashes.
+==64278== WARNING: In particular, Memcheck on 32-bit programs will fail to
+==64278== WARNING: detect any errors associated with heap-allocated data.
+==64278== 
+--64278-- ./TestCollatz:
+--64278-- dSYM directory is missing; consider using --dsymutil=yes
 Running main() from gtest_main.cc
 [==========] Running 22 tests from 1 test case.
 [----------] Global test environment set-up.
 [----------] 22 tests from Collatz
 [ RUN      ] Collatz.put_cache_value_1
-[       OK ] Collatz.put_cache_value_1 (64 ms)
+[       OK ] Collatz.put_cache_value_1 (2025 ms)
 [ RUN      ] Collatz.put_cache_value_2
-[       OK ] Collatz.put_cache_value_2 (59 ms)
+[       OK ] Collatz.put_cache_value_2 (1993 ms)
 [ RUN      ] Collatz.put_cache_value_3
-[       OK ] Collatz.put_cache_value_3 (59 ms)
+[       OK ] Collatz.put_cache_value_3 (2025 ms)
 [ RUN      ] Collatz.get_cache_value_1
-[       OK ] Collatz.get_cache_value_1 (58 ms)
+[       OK ] Collatz.get_cache_value_1 (1989 ms)
 [ RUN      ] Collatz.get_cache_value_2
-[       OK ] Collatz.get_cache_value_2 (64 ms)
+[       OK ] Collatz.get_cache_value_2 (1802 ms)
 [ RUN      ] Collatz.get_cache_value_3
-[       OK ] Collatz.get_cache_value_3 (59 ms)
+[       OK ] Collatz.get_cache_value_3 (2047 ms)
 [ RUN      ] Collatz.read_1
-[       OK ] Collatz.read_1 (0 ms)
+[       OK ] Collatz.read_1 (29 ms)
 [ RUN      ] Collatz.read_2
-[       OK ] Collatz.read_2 (0 ms)
+[       OK ] Collatz.read_2 (14 ms)
 [ RUN      ] Collatz.read_3
-[       OK ] Collatz.read_3 (0 ms)
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x10002863A: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000DB62: Collatz_read_3_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x100028645: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000DB62: Collatz_read_3_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+==64278== Conditional jump or move depends on uninitialised value(s)
+==64278==    at 0x10002864C: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000DB62: Collatz_read_3_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+[       OK ] Collatz.read_3 (11 ms)
 [ RUN      ] Collatz.read_4
-[       OK ] Collatz.read_4 (0 ms)
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x10002863A: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000EEB2: Collatz_read_4_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x100028645: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000EEB2: Collatz_read_4_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+==64278== Conditional jump or move depends on uninitialised value(s)
+==64278==    at 0x10002864C: testing::AssertionResult testing::internal::CmpHelperLT<int, int>(char const*, char const*, int const&, int const&) (in ./TestCollatz)
+==64278==    by 0x10000EEB2: Collatz_read_4_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x1000781C6: bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10005D9F5: testing::UnitTest::Run() (in ./TestCollatz)
+==64278==    by 0x100095620: RUN_ALL_TESTS() (in ./TestCollatz)
+==64278== 
+[       OK ] Collatz.read_4 (12 ms)
 [ RUN      ] Collatz.cycle_length_1
-[       OK ] Collatz.cycle_length_1 (0 ms)
+[       OK ] Collatz.cycle_length_1 (5 ms)
 [ RUN      ] Collatz.cycle_length_2
-[       OK ] Collatz.cycle_length_2 (0 ms)
+[       OK ] Collatz.cycle_length_2 (6 ms)
 [ RUN      ] Collatz.cycle_length_3
-[       OK ] Collatz.cycle_length_3 (0 ms)
+[       OK ] Collatz.cycle_length_3 (3 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (0 ms)
+[       OK ] Collatz.eval_1 (8 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (0 ms)
+[       OK ] Collatz.eval_2 (5 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (0 ms)
+[       OK ] Collatz.eval_3 (4 ms)
 [ RUN      ] Collatz.eval_4
-[       OK ] Collatz.eval_4 (0 ms)
+[       OK ] Collatz.eval_4 (5 ms)
 [ RUN      ] Collatz.print_1
-[       OK ] Collatz.print_1 (0 ms)
+[       OK ] Collatz.print_1 (19 ms)
 [ RUN      ] Collatz.print_2
-[       OK ] Collatz.print_2 (0 ms)
+[       OK ] Collatz.print_2 (12 ms)
 [ RUN      ] Collatz.solve_1
-[       OK ] Collatz.solve_1 (0 ms)
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x3F31FF: _platform_memcmp (in /usr/lib/system/libsystem_platform.dylib)
+==64278==    by 0x55418: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x554A9: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x100034BD6: testing::AssertionResult testing::internal::CmpHelperEQ<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100029044: testing::AssertionResult testing::internal::EqHelper<false>::Compare<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100014610: Collatz_solve_1_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278== 
+==64278== Use of uninitialised value of size 8
+==64278==    at 0x3F3204: _platform_memcmp (in /usr/lib/system/libsystem_platform.dylib)
+==64278==    by 0x55418: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x554A9: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x100034BD6: testing::AssertionResult testing::internal::CmpHelperEQ<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100029044: testing::AssertionResult testing::internal::EqHelper<false>::Compare<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100014610: Collatz_solve_1_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278== 
+==64278== Conditional jump or move depends on uninitialised value(s)
+==64278==    at 0x5541B: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(unsigned long, unsigned long, char const*, unsigned long) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x554A9: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const (in /usr/lib/libc++.1.dylib)
+==64278==    by 0x100034BD6: testing::AssertionResult testing::internal::CmpHelperEQ<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100029044: testing::AssertionResult testing::internal::EqHelper<false>::Compare<char [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, char const*, char const (&) [45], std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (in ./TestCollatz)
+==64278==    by 0x100014610: Collatz_solve_1_Test::TestBody() (in ./TestCollatz)
+==64278==    by 0x10008B402: void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x100075986: void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) (in ./TestCollatz)
+==64278==    by 0x10004F144: testing::Test::Run() (in ./TestCollatz)
+==64278==    by 0x10005041A: testing::TestInfo::Run() (in ./TestCollatz)
+==64278==    by 0x100051346: testing::TestCase::Run() (in ./TestCollatz)
+==64278==    by 0x10005DE37: testing::internal::UnitTestImpl::RunAllTests() (in ./TestCollatz)
+==64278==    by 0x100088392: bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) (in ./TestCollatz)
+==64278== 
+[       OK ] Collatz.solve_1 (29 ms)
 [ RUN      ] Collatz.solve_2
-[       OK ] Collatz.solve_2 (0 ms)
+[       OK ] Collatz.solve_2 (16 ms)
 [ RUN      ] Collatz.solve_3
-[       OK ] Collatz.solve_3 (0 ms)
-[----------] 22 tests from Collatz (363 ms total)
+[       OK ] Collatz.solve_3 (17 ms)
+[----------] 22 tests from Collatz (12099 ms total)
 
 [----------] Global test environment tear-down
-[==========] 22 tests from 1 test case ran. (364 ms total)
+[==========] 22 tests from 1 test case ran. (12171 ms total)
 [  PASSED  ] 22 tests.
+==64278== 
+==64278== HEAP SUMMARY:
+==64278==     in use at exit: 29,542 bytes in 368 blocks
+==64278==   total heap usage: 719 allocs, 351 frees, 56,339,137 bytes allocated
+==64278== 
+==64278== LEAK SUMMARY:
+==64278==    definitely lost: 0 bytes in 0 blocks
+==64278==    indirectly lost: 0 bytes in 0 blocks
+==64278==      possibly lost: 0 bytes in 0 blocks
+==64278==    still reachable: 4,096 bytes in 1 blocks
+==64278==         suppressed: 25,446 bytes in 367 blocks
+==64278== Rerun with --leak-check=full to see details of leaked memory
+==64278== 
+==64278== For counts of detected and suppressed errors, rerun with: -v
+==64278== Use --track-origins=yes to see where uninitialised values come from
+==64278== ERROR SUMMARY: 9 errors from 9 contexts (suppressed: 119 from 22)
 File 'Collatz.c++'
 Lines executed:98.59% of 71
 Branches executed:100.00% of 38
