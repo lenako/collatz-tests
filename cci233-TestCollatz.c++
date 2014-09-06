@@ -45,22 +45,6 @@ TEST(Collatz, read_3) {
     ASSERT_EQ( 201, p.first);
     ASSERT_EQ(210, p.second);}
 
-// ------------
-// cycle_length
-// ------------
-
-TEST(Collatz, cycle_length_1) {
-    const int v = cycle_length(5);
-    ASSERT_EQ(6, v);}
-
-TEST(Collatz, cycle_length_2) {
-    const int v = cycle_length(10);
-    ASSERT_EQ(7, v);}
-
-TEST(Collatz, cycle_length_3) {
-    const int v = cycle_length(20);
-    ASSERT_EQ(8, v);}
-
 // ----
 // eval
 // ----
