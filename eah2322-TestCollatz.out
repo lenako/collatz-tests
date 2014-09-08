@@ -1,13 +1,37 @@
 Running main() from gtest_main.cc
-[==========] Running 12 tests from 1 test case.
+[==========] Running 26 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 12 tests from Collatz
+[----------] 26 tests from Collatz
 [ RUN      ] Collatz.read_1
-[       OK ] Collatz.read_1 (1 ms)
+[       OK ] Collatz.read_1 (0 ms)
 [ RUN      ] Collatz.read_2
 [       OK ] Collatz.read_2 (0 ms)
 [ RUN      ] Collatz.read
 [       OK ] Collatz.read (0 ms)
+[ RUN      ] Collatz.cache_1
+[       OK ] Collatz.cache_1 (0 ms)
+[ RUN      ] Collatz.cache_2
+[       OK ] Collatz.cache_2 (0 ms)
+[ RUN      ] Collatz.cache_3
+[       OK ] Collatz.cache_3 (0 ms)
+[ RUN      ] Collatz.cache_4
+[       OK ] Collatz.cache_4 (0 ms)
+[ RUN      ] Collatz.length_1
+[       OK ] Collatz.length_1 (0 ms)
+[ RUN      ] Collatz.length_2
+[       OK ] Collatz.length_2 (0 ms)
+[ RUN      ] Collatz.length_3
+[       OK ] Collatz.length_3 (0 ms)
+[ RUN      ] Collatz.length_4
+[       OK ] Collatz.length_4 (0 ms)
+[ RUN      ] Collatz.loop_1
+[       OK ] Collatz.loop_1 (0 ms)
+[ RUN      ] Collatz.loop_2
+[       OK ] Collatz.loop_2 (0 ms)
+[ RUN      ] Collatz.loop_3
+[       OK ] Collatz.loop_3 (0 ms)
+[ RUN      ] Collatz.loop_4
+[       OK ] Collatz.loop_4 (0 ms)
 [ RUN      ] Collatz.eval_1
 [       OK ] Collatz.eval_1 (0 ms)
 [ RUN      ] Collatz.eval_2
@@ -26,16 +50,20 @@ Running main() from gtest_main.cc
 [       OK ] Collatz.print_4 (0 ms)
 [ RUN      ] Collatz.solve_1
 [       OK ] Collatz.solve_1 (0 ms)
-[----------] 12 tests from Collatz (1 ms total)
+[ RUN      ] Collatz.solve_2
+[       OK ] Collatz.solve_2 (376 ms)
+[ RUN      ] Collatz.solve_3
+[       OK ] Collatz.solve_3 (28 ms)
+[----------] 26 tests from Collatz (405 ms total)
 
 [----------] Global test environment tear-down
-[==========] 12 tests from 1 test case ran. (1 ms total)
-[  PASSED  ] 12 tests.
+[==========] 26 tests from 1 test case ran. (405 ms total)
+[  PASSED  ] 26 tests.
 File 'Collatz.c++'
-Lines executed:100.00% of 39
-Branches executed:100.00% of 38
-Taken at least once:65.79% of 38
-Calls executed:72.00% of 25
+Lines executed:100.00% of 77
+Branches executed:100.00% of 66
+Taken at least once:72.73% of 66
+Calls executed:60.61% of 33
 Creating 'Collatz.c++.gcov'
 
 File '/usr/include/c++/4.7/iostream'
@@ -90,10 +118,10 @@ No calls
 Creating 'char_traits.h.gcov'
 
 File 'TestCollatz.c++'
-Lines executed:100.00% of 48
-Branches executed:57.55% of 424
-Taken at least once:28.77% of 424
-Calls executed:52.24% of 379
+Lines executed:100.00% of 94
+Branches executed:56.06% of 792
+Taken at least once:28.03% of 792
+Calls executed:52.80% of 731
 Creating 'TestCollatz.c++.gcov'
 
 File '/usr/include/c++/4.7/bits/basic_ios.h'
@@ -132,9 +160,9 @@ Creating 'stl_bvector.h.gcov'
 
 File '/usr/include/gtest/internal/gtest-internal.h'
 Lines executed:66.67% of 6
-Branches executed:100.00% of 50
-Taken at least once:50.00% of 50
-Calls executed:64.29% of 112
+Branches executed:100.00% of 106
+Taken at least once:50.00% of 106
+Calls executed:65.55% of 238
 Creating 'gtest-internal.h.gcov'
 
 File '/usr/include/c++/4.7/iostream'
@@ -203,9 +231,9 @@ Creating 'basic_string.tcc.gcov'
 
 File '/usr/include/gtest/gtest.h'
 Lines executed:42.86% of 21
-Branches executed:22.22% of 54
-Taken at least once:11.11% of 54
-Calls executed:16.98% of 106
+Branches executed:22.58% of 62
+Taken at least once:11.29% of 62
+Calls executed:17.21% of 122
 Creating 'gtest.h.gcov'
 
 File '/usr/include/c++/4.7/streambuf'

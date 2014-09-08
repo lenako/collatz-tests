@@ -45,6 +45,66 @@ TEST(Collatz, read) {
     ASSERT_EQ( 1, p.first);
     ASSERT_EQ(999999, p.second);}
 
+// -----
+// cache
+// -----
+
+TEST(Collatz, cache_1) {
+    const int v = collatz_cache(2300, 89);
+    ASSERT_EQ(89, v);}
+
+TEST(Collatz, cache_2) {
+    const int v = collatz_cache(6900, 76);
+    ASSERT_EQ(76, v);}
+
+TEST(Collatz, cache_3) {
+    const int v = collatz_cache(890300, 467);
+    ASSERT_EQ(467, v);}
+
+TEST(Collatz, cache_4) {
+    const int v = collatz_cache(999900, 999);
+    ASSERT_EQ(999, v);}
+
+// ------
+// length
+// ------
+
+TEST(Collatz, length_1) {
+    const int v = collatz_length(230631);
+    ASSERT_EQ(443, v);}
+
+TEST(Collatz, length_2) {
+    const int v = collatz_length(999999);
+    ASSERT_EQ(259, v);}
+
+TEST(Collatz, length_3) {
+    const int v = collatz_length(34675);
+    ASSERT_EQ(130, v);}
+
+TEST(Collatz, length_4) {
+    const int v = collatz_length(2895);
+    ASSERT_EQ(54, v);}
+
+// ----
+// loop
+// ----
+
+TEST(Collatz, loop_1) {
+    const int v = collatz_loop(1, 10);
+    ASSERT_EQ(20, v);}
+
+TEST(Collatz, loop_2) {
+    const int v = collatz_loop(100, 200);
+    ASSERT_EQ(125, v);}
+
+TEST(Collatz, loop_3) {
+    const int v = collatz_loop(201, 210);
+    ASSERT_EQ(89, v);}
+
+TEST(Collatz, loop_4) {
+    const int v = collatz_loop(900, 1000);
+    ASSERT_EQ(174, v);}
+
 // ----
 // eval
 // ----
@@ -98,6 +158,18 @@ TEST(Collatz, solve_1) {
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
+
+TEST(Collatz, solve_2) {
+    std::istringstream r("4 7\n8 16\n4 336\n7 60493\n10 641422\n63 28\n91 60\n64 13927\n41 383427\n173 737\n212 95369\n568 956430\n65783 21531\n22863 65124\n174068 703136\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("4 7 17\n8 16 20\n4 336 144\n7 60493 340\n10 641422 470\n63 28 113\n91 60 116\n64 13927 276\n41 383427 443\n173 737 171\n212 95369 351\n568 956430 476\n65783 21531 340\n22863 65124 340\n174068 703136 470\n", w.str());}
+
+TEST(Collatz, solve_3) {
+    std::istringstream r("10 3\n3 59\n10 168\n4 18457\n2 478043\n30 74\n22 920\n85 98538\n99 594325\n316 371\n414 3527\n92 268981\n59957 41874\n6863 99171\n906997 497282\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("10 3 20\n3 59 113\n10 168 122\n4 18457 279\n2 478043 449\n30 74 116\n22 920 179\n85 98538 351\n99 594325 470\n316 371 144\n414 3527 217\n92 268981 443\n59957 41874 340\n6863 99171 351\n906997 497282 470\n", w.str());}
 
 /*
 % ls -al /usr/include/gtest/
