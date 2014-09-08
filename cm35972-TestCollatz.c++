@@ -61,6 +61,12 @@ TEST(Collatz, read_inverted) {
     ASSERT_EQ(9, p.first);
     ASSERT_EQ(2, p.second);}
 
+TEST(Collatz, read_range) {
+    std::istringstream r("1 999999\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ(1, p.first);
+    ASSERT_EQ(999999, p.second);}
+
 // ----
 // eval
 // ----
@@ -86,16 +92,16 @@ TEST(Collatz, eval_4) {
 // ----
 
 TEST(Collatz, eval_5) {
-    const int v = collatz_eval(1, 999999);
-    ASSERT_EQ(525, v);}
+    const int v = collatz_eval(87006, 88015);
+    ASSERT_EQ(333, v);}
 
 TEST(Collatz, eval_6) {
     const int v = collatz_eval(1, 1);
     ASSERT_EQ(1, v);}
 
 TEST(Collatz, eval_7) {
-    const int v = collatz_eval(999999, 999999);
-    ASSERT_EQ(259, v);}
+    const int v = collatz_eval(99902, 64512);
+    ASSERT_EQ(351, v);}
 
 // -----
 // print
@@ -172,9 +178,9 @@ TEST(Collatz, mc_2) {
     ASSERT_EQ(17, v);}
 
 TEST(Collatz, mc_3) {
-    int n = 999999;
+    int n = 1000;
     const int v = collatz_max_cycle(n);
-    ASSERT_EQ(259, v);}
+    ASSERT_EQ(112, v);}
 
 /*
 % ls -al /usr/include/gtest/
