@@ -81,17 +81,17 @@ TEST(Collatz, eval_7){
 // cycle
 // ----
 
-TEST(Collatz, cycle_1){
-    const int c = collatz_cycle(1);
-    ASSERT_EQ(1, c);}
+// TEST(Collatz, cycle_1){
+//     const int c = collatz_cycle(1);
+//     ASSERT_EQ(1, c);}
 
-TEST(Collatz, cycle_2){
-    const int c = collatz_cycle(1000000);
-    ASSERT_EQ(153, c);}
+// TEST(Collatz, cycle_2){
+//     const int c = collatz_cycle(1000000);
+//     ASSERT_EQ(153, c);}
 
-TEST(Collatz, cycle_3){
-    const int c = collatz_cycle(9);
-    ASSERT_EQ(20, c);}
+// TEST(Collatz, cycle_3){
+//     const int c = collatz_cycle(9);
+//     ASSERT_EQ(20, c);}
 
 // -----
 // print
