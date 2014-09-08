@@ -31,7 +31,7 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.loop_3
 [       OK ] Collatz.loop_3 (0 ms)
 [ RUN      ] Collatz.loop_4
-[       OK ] Collatz.loop_4 (0 ms)
+[       OK ] Collatz.loop_4 (1 ms)
 [ RUN      ] Collatz.eval_1
 [       OK ] Collatz.eval_1 (0 ms)
 [ RUN      ] Collatz.eval_2
@@ -51,18 +51,18 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.solve_1
 [       OK ] Collatz.solve_1 (0 ms)
 [ RUN      ] Collatz.solve_2
-[       OK ] Collatz.solve_2 (376 ms)
+[       OK ] Collatz.solve_2 (32 ms)
 [ RUN      ] Collatz.solve_3
-[       OK ] Collatz.solve_3 (28 ms)
-[----------] 26 tests from Collatz (405 ms total)
+[       OK ] Collatz.solve_3 (1 ms)
+[----------] 26 tests from Collatz (34 ms total)
 
 [----------] Global test environment tear-down
-[==========] 26 tests from 1 test case ran. (405 ms total)
+[==========] 26 tests from 1 test case ran. (34 ms total)
 [  PASSED  ] 26 tests.
 File 'Collatz.c++'
-Lines executed:100.00% of 77
+Lines executed:96.10% of 77
 Branches executed:100.00% of 66
-Taken at least once:72.73% of 66
+Taken at least once:71.21% of 66
 Calls executed:60.61% of 33
 Creating 'Collatz.c++.gcov'
 
@@ -231,9 +231,9 @@ Creating 'basic_string.tcc.gcov'
 
 File '/usr/include/gtest/gtest.h'
 Lines executed:42.86% of 21
-Branches executed:22.58% of 62
-Taken at least once:11.29% of 62
-Calls executed:17.21% of 122
+Branches executed:22.86% of 70
+Taken at least once:11.43% of 70
+Calls executed:17.39% of 138
 Creating 'gtest.h.gcov'
 
 File '/usr/include/c++/4.7/streambuf'

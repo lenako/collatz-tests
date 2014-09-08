@@ -70,20 +70,20 @@ TEST(Collatz, cache_4) {
 // ------
 
 TEST(Collatz, length_1) {
-    const int v = collatz_length(230631);
-    ASSERT_EQ(443, v);}
+    const int v = collatz_length(43999);
+    ASSERT_EQ(120, v);}
 
 TEST(Collatz, length_2) {
-    const int v = collatz_length(999999);
-    ASSERT_EQ(259, v);}
+    const int v = collatz_length(56001);
+    ASSERT_EQ(136, v);}
 
 TEST(Collatz, length_3) {
-    const int v = collatz_length(34675);
-    ASSERT_EQ(130, v);}
+    const int v = collatz_length(75469);
+    ASSERT_EQ(38, v);}
 
 TEST(Collatz, length_4) {
-    const int v = collatz_length(2895);
-    ASSERT_EQ(54, v);}
+    const int v = collatz_length(112297);
+    ASSERT_EQ(230, v);}
 
 // ----
 // loop
@@ -160,16 +160,16 @@ TEST(Collatz, solve_1) {
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
 
 TEST(Collatz, solve_2) {
-    std::istringstream r("4 7\n8 16\n4 336\n7 60493\n10 641422\n63 28\n91 60\n64 13927\n41 383427\n173 737\n212 95369\n568 956430\n65783 21531\n22863 65124\n174068 703136\n");
+    std::istringstream r("13643 27285\n56857 90418\n3 3\n34 67\n431 861\n4607 9212\n44 86\n293 584\n25739 51477\n47911 95821\n526 893\n");
     std::ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("4 7 17\n8 16 20\n4 336 144\n7 60493 340\n10 641422 470\n63 28 113\n91 60 116\n64 13927 276\n41 383427 443\n173 737 171\n212 95369 351\n568 956430 476\n65783 21531 340\n22863 65124 340\n174068 703136 470\n", w.str());}
+    ASSERT_EQ("13643 27285 308\n56857 90418 351\n3 3 8\n34 67 113\n431 861 171\n4607 9212 262\n44 86 116\n293 584 144\n25739 51477 324\n47911 95821 351\n526 893 179\n", w.str());}
 
 TEST(Collatz, solve_3) {
-    std::istringstream r("10 3\n3 59\n10 168\n4 18457\n2 478043\n30 74\n22 920\n85 98538\n99 594325\n316 371\n414 3527\n92 268981\n59957 41874\n6863 99171\n906997 497282\n");
+    std::istringstream r("67858 73814\n81495 99182\n3 4\n42 82\n209 416\n34414 68826\n");
     std::ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("10 3 20\n3 59 113\n10 168 122\n4 18457 279\n2 478043 449\n30 74 116\n22 920 179\n85 98538 351\n99 594325 470\n316 371 144\n414 3527 217\n92 268981 443\n59957 41874 340\n6863 99171 351\n906997 497282 470\n", w.str());}
+    ASSERT_EQ("67858 73814 325\n81495 99182 333\n3 4 8\n42 82 116\n209 416 144\n34414 68826 340\n", w.str());}
 
 /*
 % ls -al /usr/include/gtest/
