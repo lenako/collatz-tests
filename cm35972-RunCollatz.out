@@ -1,8 +1,12 @@
-==14295== Memcheck, a memory error detector
-==14295== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==14295== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==14295== Command: RunCollatz
-==14295== 
+==5414== Memcheck, a memory error detector
+==5414== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==5414== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==5414== Command: RunCollatz
+==5414== 
+1 999999 525
+999999 1 525
+1 1 1
+999999 999999 259
 291188 931733 525
 694459 638630 449
 749751 238760 509
@@ -1003,12 +1007,12 @@
 39071 353508 443
 918785 892575 476
 260210 254289 363
-==14295== 
-==14295== HEAP SUMMARY:
-==14295==     in use at exit: 0 bytes in 0 blocks
-==14295==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==14295== 
-==14295== All heap blocks were freed -- no leaks are possible
-==14295== 
-==14295== For counts of detected and suppressed errors, rerun with: -v
-==14295== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+==5414== 
+==5414== HEAP SUMMARY:
+==5414==     in use at exit: 0 bytes in 0 blocks
+==5414==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==5414== 
+==5414== All heap blocks were freed -- no leaks are possible
+==5414== 
+==5414== For counts of detected and suppressed errors, rerun with: -v
+==5414== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
