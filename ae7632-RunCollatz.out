@@ -3,8 +3,8 @@
 ==26230== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
 ==26230== Command: RunCollatz
 ==26230== 
-249367 250194 332
 50040 8876 324
+249367 250194 332
 86052 86880 302
 24532 33146 308
 7966 12765 268
