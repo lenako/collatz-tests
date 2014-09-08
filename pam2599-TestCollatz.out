@@ -1,0 +1,43 @@
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 17 tests from Collatz
+[ RUN      ] Collatz.read_1
+[       OK ] Collatz.read_1 (0 ms)
+[ RUN      ] Collatz.read_2
+[       OK ] Collatz.read_2 (0 ms)
+[ RUN      ] Collatz.read_3
+[       OK ] Collatz.read_3 (0 ms)
+[ RUN      ] Collatz.eval_single_1
+[       OK ] Collatz.eval_single_1 (0 ms)
+[ RUN      ] Collatz.eval_single_2
+[       OK ] Collatz.eval_single_2 (0 ms)
+[ RUN      ] Collatz.eval_single_3
+[       OK ] Collatz.eval_single_3 (0 ms)
+[ RUN      ] Collatz.eval_single_4
+[       OK ] Collatz.eval_single_4 (0 ms)
+[ RUN      ] Collatz.eval_range_1
+[       OK ] Collatz.eval_range_1 (0 ms)
+[ RUN      ] Collatz.eval_range_2
+[       OK ] Collatz.eval_range_2 (0 ms)
+[ RUN      ] Collatz.eval_range_3
+[       OK ] Collatz.eval_range_3 (0 ms)
+[ RUN      ] Collatz.eval_range_4
+[       OK ] Collatz.eval_range_4 (0 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (0 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (0 ms)
+[ RUN      ] Collatz.print_3
+[       OK ] Collatz.print_3 (0 ms)
+[ RUN      ] Collatz.solve_1
+[       OK ] Collatz.solve_1 (0 ms)
+[ RUN      ] Collatz.solve_2
+[       OK ] Collatz.solve_2 (0 ms)
+[ RUN      ] Collatz.solve_3
+[       OK ] Collatz.solve_3 (0 ms)
+[----------] 17 tests from Collatz (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 17 tests.
