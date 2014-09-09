@@ -1,82 +1,155 @@
-==15147== Memcheck, a memory error detector
-==15147== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==15147== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==15147== Command: TestCollatz
-==15147== 
+==14056== Memcheck, a memory error detector
+==14056== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==14056== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==14056== Command: TestCollatz
+==14056== 
 Running main() from gtest_main.cc
-[==========] Running 22 tests from 1 test case.
+[==========] Running 36 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 22 tests from Collatz
+[----------] 36 tests from Collatz
 [ RUN      ] Collatz.read
-[       OK ] Collatz.read (18 ms)
-[ RUN      ] Collatz.read_1
-[       OK ] Collatz.read_1 (3 ms)
-[ RUN      ] Collatz.read_2
-[       OK ] Collatz.read_2 (3 ms)
-[ RUN      ] Collatz.read_3
-[       OK ] Collatz.read_3 (3 ms)
-[ RUN      ] Collatz.read_4
-[       OK ] Collatz.read_4 (3 ms)
+[       OK ] Collatz.read (19 ms)
+[ RUN      ] Collatz.READ_1
+[       OK ] Collatz.READ_1 (3 ms)
+[ RUN      ] Collatz.READ_2
+[       OK ] Collatz.READ_2 (5 ms)
+[ RUN      ] Collatz.READ_3
+[       OK ] Collatz.READ_3 (4 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (3 ms)
+[       OK ] Collatz.eval_1 (4 ms)
 [ RUN      ] Collatz.eval_2
 [       OK ] Collatz.eval_2 (2 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (1 ms)
+[       OK ] Collatz.eval_3 (2 ms)
 [ RUN      ] Collatz.eval_4
 [       OK ] Collatz.eval_4 (2 ms)
-[ RUN      ] Collatz.eval_5
-[       OK ] Collatz.eval_5 (1 ms)
-[ RUN      ] Collatz.eval_6
-[       OK ] Collatz.eval_6 (76 ms)
-[ RUN      ] Collatz.eval_7
-[       OK ] Collatz.eval_7 (370 ms)
-[ RUN      ] Collatz.eval_8
-[       OK ] Collatz.eval_8 (1 ms)
+[ RUN      ] Collatz.EVAL_5
+[       OK ] Collatz.EVAL_5 (3 ms)
+[ RUN      ] Collatz.EVAL_6
+[       OK ] Collatz.EVAL_6 (2 ms)
+[ RUN      ] Collatz.EVAL_7
+[       OK ] Collatz.EVAL_7 (2 ms)
+[ RUN      ] Collatz.EVAL_8
+[       OK ] Collatz.EVAL_8 (2 ms)
+[ RUN      ] Collatz.EVAL_9
+[       OK ] Collatz.EVAL_9 (1 ms)
+[ RUN      ] Collatz.EVAL_10
+[       OK ] Collatz.EVAL_10 (7 ms)
+[ RUN      ] Collatz.EVAL_11
+[       OK ] Collatz.EVAL_11 (7 ms)
+[ RUN      ] Collatz.EVAL_12
+[       OK ] Collatz.EVAL_12 (2 ms)
+[ RUN      ] Collatz.EVAL_13
+[       OK ] Collatz.EVAL_13 (3 ms)
+[ RUN      ] Collatz.EVAL_14
+[       OK ] Collatz.EVAL_14 (3 ms)
+[ RUN      ] Collatz.EVAL_15
+[       OK ] Collatz.EVAL_15 (5 ms)
+[ RUN      ] Collatz.EVAL_16
+[       OK ] Collatz.EVAL_16 (3 ms)
+[ RUN      ] Collatz.EVAL_17
+[       OK ] Collatz.EVAL_17 (2 ms)
+[ RUN      ] Collatz.EVAL_18
+[       OK ] Collatz.EVAL_18 (4 ms)
+[ RUN      ] Collatz.EVAL_19
+[       OK ] Collatz.EVAL_19 (4 ms)
+[ RUN      ] Collatz.EVAL_20
+[       OK ] Collatz.EVAL_20 (4 ms)
 [ RUN      ] Collatz.print
 [       OK ] Collatz.print (10 ms)
-[ RUN      ] Collatz.print_1
-[       OK ] Collatz.print_1 (3 ms)
-[ RUN      ] Collatz.print_2
-[       OK ] Collatz.print_2 (2 ms)
-[ RUN      ] Collatz.print_3
-[       OK ] Collatz.print_3 (3 ms)
-[ RUN      ] Collatz.print_4
-[       OK ] Collatz.print_4 (3 ms)
+[ RUN      ] Collatz.PRINT_1
+[       OK ] Collatz.PRINT_1 (3 ms)
+[ RUN      ] Collatz.PRINT_2
+[       OK ] Collatz.PRINT_2 (3 ms)
+[ RUN      ] Collatz.PRINT_3
+[       OK ] Collatz.PRINT_3 (3 ms)
 [ RUN      ] Collatz.solve
-[       OK ] Collatz.solve (7 ms)
-[ RUN      ] Collatz.solve_1
-[       OK ] Collatz.solve_1 (3 ms)
-[ RUN      ] Collatz.solve_2
-[       OK ] Collatz.solve_2 (3 ms)
-[ RUN      ] Collatz.solve_3
-[       OK ] Collatz.solve_3 (583 ms)
-[----------] 22 tests from Collatz (1119 ms total)
+[       OK ] Collatz.solve (5 ms)
+[ RUN      ] Collatz.SOLVE_1
+[       OK ] Collatz.SOLVE_1 (3 ms)
+[ RUN      ] Collatz.SOLVE_2
+[       OK ] Collatz.SOLVE_2 (3 ms)
+[ RUN      ] Collatz.SOLVE_3
+[       OK ] Collatz.SOLVE_3 (1443 ms)
+[ RUN      ] Collatz.SOLVE_4
+[       OK ] Collatz.SOLVE_4 (1241 ms)
+[ RUN      ] Collatz.SOLVE_5
+[       OK ] Collatz.SOLVE_5 (5 ms)
+[ RUN      ] Collatz.SOLVE_6
+[       OK ] Collatz.SOLVE_6 (15 ms)
+[ RUN      ] Collatz.SOLVE_7
+[       OK ] Collatz.SOLVE_7 (13 ms)
+[----------] 36 tests from Collatz (2852 ms total)
 
 [----------] Global test environment tear-down
-[==========] 22 tests from 1 test case ran. (1145 ms total)
-[  PASSED  ] 22 tests.
-==15147== 
-==15147== HEAP SUMMARY:
-==15147==     in use at exit: 0 bytes in 0 blocks
-==15147==   total heap usage: 1,022 allocs, 1,022 frees, 105,333 bytes allocated
-==15147== 
-==15147== All heap blocks were freed -- no leaks are possible
-==15147== 
-==15147== For counts of detected and suppressed errors, rerun with: -v
-==15147== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+[==========] 36 tests from 1 test case ran. (2880 ms total)
+[  PASSED  ] 36 tests.
+==14056== 
+==14056== HEAP SUMMARY:
+==14056==     in use at exit: 0 bytes in 0 blocks
+==14056==   total heap usage: 1,499 allocs, 1,499 frees, 4,136,588 bytes allocated
+==14056== 
+==14056== All heap blocks were freed -- no leaks are possible
+==14056== 
+==14056== For counts of detected and suppressed errors, rerun with: -v
+==14056== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
 File 'Collatz.c++'
-Lines executed:100.00% of 39
-Branches executed:100.00% of 36
-Taken at least once:69.44% of 36
-Calls executed:73.91% of 23
+Lines executed:100.00% of 41
+Branches executed:100.00% of 42
+Taken at least once:73.81% of 42
+Calls executed:83.87% of 31
 Creating 'Collatz.c++.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_construct.h'
+Lines executed:0.00% of 7
+No branches
+Calls executed:0.00% of 2
+Creating 'stl_construct.h.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_vector.h'
+Lines executed:68.57% of 35
+Branches executed:60.00% of 10
+Taken at least once:30.00% of 10
+Calls executed:40.91% of 22
+Creating 'stl_vector.h.gcov'
 
 File '/usr/include/c++/4.7/iostream'
 Lines executed:100.00% of 1
 No branches
 Calls executed:100.00% of 2
 Creating 'iostream.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_iterator_base_types.h'
+Lines executed:100.00% of 2
+No branches
+No calls
+Creating 'stl_iterator_base_types.h.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_algobase.h'
+Lines executed:100.00% of 13
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+Calls executed:100.00% of 3
+Creating 'stl_algobase.h.gcov'
+
+File '/usr/include/c++/4.7/ext/new_allocator.h'
+Lines executed:72.73% of 11
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:50.00% of 4
+Creating 'new_allocator.h.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_uninitialized.h'
+Lines executed:100.00% of 7
+No branches
+Calls executed:100.00% of 3
+Creating 'stl_uninitialized.h.gcov'
+
+File '/usr/include/c++/4.7/bits/allocator.h'
+Lines executed:100.00% of 4
+No branches
+Calls executed:100.00% of 3
+Creating 'allocator.h.gcov'
 
 File '/usr/include/c++/4.7/bits/basic_ios.h'
 Lines executed:0.00% of 4
@@ -91,18 +164,18 @@ No branches
 No calls
 Removing 'ostream.gcov'
 
+File '/usr/include/c++/4.7/bits/move.h'
+Lines executed:100.00% of 9
+No branches
+Calls executed:100.00% of 3
+Creating 'move.h.gcov'
+
 File '/usr/include/c++/4.7/bits/stl_pair.h'
 Lines executed:100.00% of 6
 Branches executed:100.00% of 4
 Taken at least once:75.00% of 4
 Calls executed:100.00% of 10
 Creating 'stl_pair.h.gcov'
-
-File '/usr/include/c++/4.7/bits/move.h'
-Lines executed:100.00% of 2
-No branches
-No calls
-Creating 'move.h.gcov'
 
 File '/usr/include/c++/4.7/bits/locale_facets.h'
 Lines executed:0.00% of 5
@@ -124,10 +197,10 @@ No calls
 Creating 'char_traits.h.gcov'
 
 File 'TestCollatz.c++'
-Lines executed:100.00% of 89
-Branches executed:58.25% of 776
-Taken at least once:29.12% of 776
-Calls executed:52.71% of 702
+Lines executed:100.00% of 137
+Branches executed:57.89% of 1140
+Taken at least once:28.95% of 1140
+Calls executed:53.45% of 1057
 Creating 'TestCollatz.c++.gcov'
 
 File '/usr/include/c++/4.7/bits/basic_ios.h'
@@ -166,9 +239,9 @@ Creating 'stl_bvector.h.gcov'
 
 File '/usr/include/gtest/internal/gtest-internal.h'
 Lines executed:66.67% of 6
-Branches executed:100.00% of 90
-Taken at least once:50.00% of 90
-Calls executed:65.35% of 202
+Branches executed:100.00% of 146
+Taken at least once:50.00% of 146
+Calls executed:65.85% of 328
 Creating 'gtest-internal.h.gcov'
 
 File '/usr/include/c++/4.7/iostream'
@@ -236,10 +309,10 @@ Calls executed:0.00% of 20
 Creating 'basic_string.tcc.gcov'
 
 File '/usr/include/gtest/gtest.h'
-Lines executed:42.86% of 21
-Branches executed:22.58% of 62
-Taken at least once:11.29% of 62
-Calls executed:17.21% of 122
+Lines executed:47.83% of 23
+Branches executed:23.53% of 102
+Taken at least once:11.76% of 102
+Calls executed:18.23% of 203
 Creating 'gtest.h.gcov'
 
 File '/usr/include/c++/4.7/streambuf'
