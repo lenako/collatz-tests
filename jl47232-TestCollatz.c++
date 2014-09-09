@@ -53,6 +53,11 @@ TEST(Collatz, read_3) {
     ASSERT_EQ( 15, p.first);
     ASSERT_EQ(25, p.second);}
 TEST(Collatz, read_4) {
+    std::istringstream r("2523 25\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 2523, p.first);
+    ASSERT_EQ(25, p.second);}
+TEST(Collatz, read_5) {
     std::istringstream r("99999 99999\n");
     const std::pair<int, int> p = collatz_read(r);
     ASSERT_EQ( 99999, p.first);
@@ -156,6 +161,12 @@ TEST(Collatz, solve_3) {
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("3815 18965 279\n438 68254 340\n91631 43229 351\n16281 8013 276\n", w.str());}
+TEST(Collatz, solve_4) {
+    std::istringstream r("17707 26464\n214 28416\n1000 1000\n10000 1000\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("17707 26464 282\n214 28416 308\n1000 1000 112\n10000 1000 262\n", w.str());}
+
 
 /*
 % ls -al /usr/include/gtest/
