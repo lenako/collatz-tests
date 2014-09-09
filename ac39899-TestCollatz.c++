@@ -46,10 +46,10 @@ TEST(Collatz, read_2) {
     ASSERT_EQ(210, p.second);}
 
 TEST(Collatz, read_3) {
-    std::istringstream r("900 1000\n");
+    std::istringstream r("0\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ( 900, p.first);
-    ASSERT_EQ(1000, p.second);}
+    ASSERT_EQ(0, p.first);
+    ASSERT_EQ(0, p.second);}
 
 TEST(Collatz, read_4) {
     std::istringstream r("\n");
@@ -96,17 +96,8 @@ TEST(Collatz, eval_4) {
     ASSERT_EQ(174, v);}
 
 TEST(Collatz, eval_5) {
-    const int v = collatz_eval(44730, 58032);
+    const int v = collatz_eval(58032, 44730);
     ASSERT_EQ(340, v);}
-
-TEST(Collatz, eval_6) {
-    const int v = collatz_eval(353896, 616125);
-    ASSERT_EQ(470, v);}
-
-TEST(Collatz, eval_7) {
-    const int v = collatz_eval(660337, 126506);
-    ASSERT_EQ(470, v);}
-
 // -----
 // print
 // -----
