@@ -47,27 +47,45 @@ TEST(Collatz, read_3) {
 	ASSERT_EQ(0, p.second);
 }
 
-
 // ----
 // eval
 // ----
 
 TEST(Collatz, eval_1) {
-    const int v = collatz_eval(1, 10);
-    ASSERT_EQ(20, v);}
+    const int v = collatz_eval(55, 56);
+    ASSERT_EQ(113, v);}
 
 TEST(Collatz, eval_2) {
-    const int v = collatz_eval(100, 200);
-    ASSERT_EQ(125, v);}
+    const int v = collatz_eval(101, 101);
+    ASSERT_EQ(26, v);}
 
 TEST(Collatz, eval_3) {
-    const int v = collatz_eval(999168, 999999);
+    const int v = collatz_eval(999999, 999168);
     ASSERT_EQ(396, v);}
 
 TEST(Collatz, eval_4) {
     const int v = collatz_eval(1, 113382);
     ASSERT_EQ(354, v);}
 
+// ----
+// computeNumCycles
+// ----
+
+TEST(Collatz, computeNumCycles_1) {
+    const int v = computeNumCycles(999999);
+    ASSERT_EQ(259, v);
+}
+
+TEST(Collatz, computeNumCycles_2) {
+    const int v = computeNumCycles(1);
+    ASSERT_EQ(1, v);
+}
+
+TEST(Collatz, computeNumCycles_3) {
+    const int v = computeNumCycles(1001);
+    ASSERT_EQ(143, v);
+}
+ 
 // -----
 // print
 // -----

@@ -1,12 +1,12 @@
-==15147== Memcheck, a memory error detector
-==15147== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==15147== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==15147== Command: TestCollatz
-==15147== 
+==6049== Memcheck, a memory error detector
+==6049== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==6049== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==6049== Command: TestCollatz
+==6049== 
 Running main() from gtest_main.cc
-[==========] Running 22 tests from 1 test case.
+[==========] Running 24 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 22 tests from Collatz
+[----------] 24 tests from Collatz
 [ RUN      ] Collatz.read
 [       OK ] Collatz.read (18 ms)
 [ RUN      ] Collatz.read_1
@@ -17,59 +17,63 @@ Running main() from gtest_main.cc
 [       OK ] Collatz.read_3 (3 ms)
 [ RUN      ] Collatz.read_4
 [       OK ] Collatz.read_4 (3 ms)
+[ RUN      ] Collatz.read_5
+[       OK ] Collatz.read_5 (3 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (3 ms)
+[       OK ] Collatz.eval_1 (6 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (2 ms)
+[       OK ] Collatz.eval_2 (3 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (1 ms)
+[       OK ] Collatz.eval_3 (3 ms)
 [ RUN      ] Collatz.eval_4
-[       OK ] Collatz.eval_4 (2 ms)
+[       OK ] Collatz.eval_4 (4 ms)
 [ RUN      ] Collatz.eval_5
-[       OK ] Collatz.eval_5 (1 ms)
+[       OK ] Collatz.eval_5 (4 ms)
 [ RUN      ] Collatz.eval_6
-[       OK ] Collatz.eval_6 (76 ms)
+[       OK ] Collatz.eval_6 (24 ms)
 [ RUN      ] Collatz.eval_7
-[       OK ] Collatz.eval_7 (370 ms)
+[       OK ] Collatz.eval_7 (25 ms)
 [ RUN      ] Collatz.eval_8
-[       OK ] Collatz.eval_8 (1 ms)
+[       OK ] Collatz.eval_8 (4 ms)
 [ RUN      ] Collatz.print
 [       OK ] Collatz.print (10 ms)
 [ RUN      ] Collatz.print_1
 [       OK ] Collatz.print_1 (3 ms)
 [ RUN      ] Collatz.print_2
-[       OK ] Collatz.print_2 (2 ms)
+[       OK ] Collatz.print_2 (3 ms)
 [ RUN      ] Collatz.print_3
 [       OK ] Collatz.print_3 (3 ms)
 [ RUN      ] Collatz.print_4
-[       OK ] Collatz.print_4 (3 ms)
+[       OK ] Collatz.print_4 (2 ms)
 [ RUN      ] Collatz.solve
-[       OK ] Collatz.solve (7 ms)
+[       OK ] Collatz.solve (14 ms)
 [ RUN      ] Collatz.solve_1
-[       OK ] Collatz.solve_1 (3 ms)
+[       OK ] Collatz.solve_1 (11 ms)
 [ RUN      ] Collatz.solve_2
-[       OK ] Collatz.solve_2 (3 ms)
+[       OK ] Collatz.solve_2 (11 ms)
 [ RUN      ] Collatz.solve_3
-[       OK ] Collatz.solve_3 (583 ms)
-[----------] 22 tests from Collatz (1119 ms total)
+[       OK ] Collatz.solve_3 (27 ms)
+[ RUN      ] Collatz.solve_4
+[       OK ] Collatz.solve_4 (17 ms)
+[----------] 24 tests from Collatz (218 ms total)
 
 [----------] Global test environment tear-down
-[==========] 22 tests from 1 test case ran. (1145 ms total)
-[  PASSED  ] 22 tests.
-==15147== 
-==15147== HEAP SUMMARY:
-==15147==     in use at exit: 0 bytes in 0 blocks
-==15147==   total heap usage: 1,022 allocs, 1,022 frees, 105,333 bytes allocated
-==15147== 
-==15147== All heap blocks were freed -- no leaks are possible
-==15147== 
-==15147== For counts of detected and suppressed errors, rerun with: -v
-==15147== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+[==========] 24 tests from 1 test case ran. (246 ms total)
+[  PASSED  ] 24 tests.
+==6049== 
+==6049== HEAP SUMMARY:
+==6049==     in use at exit: 0 bytes in 0 blocks
+==6049==   total heap usage: 1,094 allocs, 1,094 frees, 110,129 bytes allocated
+==6049== 
+==6049== All heap blocks were freed -- no leaks are possible
+==6049== 
+==6049== For counts of detected and suppressed errors, rerun with: -v
+==6049== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
 File 'Collatz.c++'
-Lines executed:100.00% of 39
-Branches executed:100.00% of 36
-Taken at least once:69.44% of 36
-Calls executed:73.91% of 23
+Lines executed:100.00% of 65
+Branches executed:100.00% of 56
+Taken at least once:76.79% of 56
+Calls executed:70.83% of 24
 Creating 'Collatz.c++.gcov'
 
 File '/usr/include/c++/4.7/iostream'
@@ -124,10 +128,10 @@ No calls
 Creating 'char_traits.h.gcov'
 
 File 'TestCollatz.c++'
-Lines executed:100.00% of 89
-Branches executed:58.25% of 776
-Taken at least once:29.12% of 776
-Calls executed:52.71% of 702
+Lines executed:100.00% of 99
+Branches executed:58.53% of 868
+Taken at least once:29.26% of 868
+Calls executed:52.68% of 784
 Creating 'TestCollatz.c++.gcov'
 
 File '/usr/include/c++/4.7/bits/basic_ios.h'
@@ -166,9 +170,9 @@ Creating 'stl_bvector.h.gcov'
 
 File '/usr/include/gtest/internal/gtest-internal.h'
 Lines executed:66.67% of 6
-Branches executed:100.00% of 90
-Taken at least once:50.00% of 90
-Calls executed:65.35% of 202
+Branches executed:100.00% of 98
+Taken at least once:50.00% of 98
+Calls executed:65.45% of 220
 Creating 'gtest-internal.h.gcov'
 
 File '/usr/include/c++/4.7/iostream'
@@ -237,9 +241,9 @@ Creating 'basic_string.tcc.gcov'
 
 File '/usr/include/gtest/gtest.h'
 Lines executed:42.86% of 21
-Branches executed:22.58% of 62
-Taken at least once:11.29% of 62
-Calls executed:17.21% of 122
+Branches executed:22.86% of 70
+Taken at least once:11.43% of 70
+Calls executed:17.39% of 138
 Creating 'gtest.h.gcov'
 
 File '/usr/include/c++/4.7/streambuf'

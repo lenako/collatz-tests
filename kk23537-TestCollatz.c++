@@ -30,30 +30,21 @@
 TEST(Collatz, read) {
     std::istringstream r("1 10\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ( 1, p.first);
+    ASSERT_EQ(1, p.first);
     ASSERT_EQ(10, p.second);}
 
-// ----
-// new unit tests for read
-// ----
-
-TEST(Collatz, read_inverted) {
-    std::istringstream r("2 1\n");
+TEST(Collatz, read_2) {
+    std::istringstream r("10 1\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ( 2, p.first);
-    ASSERT_EQ( 1, p.second);}
+    ASSERT_EQ(10, p.first);
+    ASSERT_EQ(1, p.second);}
 
-TEST(Collatz, read_duplicate) {
-    std::istringstream r("5 5\n");
+TEST(Collatz, read_3) {
+    std::istringstream r("6474 8439\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ( 5, p.first);
-    ASSERT_EQ( 5, p.second);}
+    ASSERT_EQ(6474, p.first);
+    ASSERT_EQ(8439, p.second);}    
 
-TEST(Collatz, read_no_input) {
-    std::istringstream r("");
-    const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ( 0, p.first);
-    ASSERT_EQ( 0, p.second);}
 
 // ----
 // eval
@@ -75,22 +66,6 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
 
-// ----
-// new unit tests for eval
-// ----
-
-TEST(Collatz, eval_onesies) {
-    const int v = collatz_eval(1, 1);
-    ASSERT_EQ(1, v);}
-
-TEST(Collatz, eval_duplicates) {
-    const int v = collatz_eval(6, 6);
-    ASSERT_EQ(9, v);}
-
-TEST(Collatz, eval_inverted_input) {
-    const int v = collatz_eval(10, 1);
-    ASSERT_EQ(20, v);}
-
 // -----
 // print
 // -----
@@ -100,14 +75,10 @@ TEST(Collatz, print) {
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
-// -----
-// new unit tests for print
-// -----
-
 TEST(Collatz, print_2) {
     std::ostringstream w;
-    collatz_print(w, 100, 200, 25);
-    ASSERT_EQ("100 200 25\n", w.str());}
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}
 
 TEST(Collatz, print_3) {
     std::ostringstream w;
@@ -116,23 +87,10 @@ TEST(Collatz, print_3) {
 
 TEST(Collatz, print_4) {
     std::ostringstream w;
-    collatz_print(w, 900, 1000, 74);
-    ASSERT_EQ("900 1000 74\n", w.str());}
+    collatz_print(w, 900, 1000, 174);
+    ASSERT_EQ("900 1000 174\n", w.str());}
 
-TEST(Collatz, print_duplicates) {
-    std::ostringstream w;
-    collatz_print(w, 4, 4, 3);
-    ASSERT_EQ("4 4 3\n", w.str());}
 
-TEST(Collatz, print_inverted_input) {
-    std::ostringstream w;
-    collatz_print(w, 10, 1, 20);
-    ASSERT_EQ("10 1 20\n", w.str());}
-
-TEST(Collatz, print_onesies) {
-    std::ostringstream w;
-    collatz_print(w, 1, 1, 1);
-    ASSERT_EQ("1 1 1\n", w.str());}
 
 // -----
 // solve
@@ -143,36 +101,18 @@ TEST(Collatz, solve) {
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
-
-// -----
-// new unit test for solve
-// -----
-
+/*
 TEST(Collatz, solve_2) {
-    std::istringstream r("1 1\n4 4\n10 1\n210 201\n");
+    std::istringstream r("10 1\n200 100\n210 201\n1000 9000\n");
     std::ostringstream w;
     collatz_solve(r, w);
-    ASSERT_EQ("1 1 1\n4 4 3\n10 1 20\n210 201 89\n", w.str());}
-
-// -----
-// new unit tests for my own function cycle_length
-// -----
-
-TEST(Collatz, test_cycle_length) {
-    const int c = 5;
-    ASSERT_EQ(cycle_length(c), 6);}
-
-TEST(Collatz, test_cycle_length_onesie) {
-    const int c = 1;
-    ASSERT_EQ(cycle_length(c), 1);}
-
-TEST(Collatz, test_cycle_3) {
-    const int c = 4;
-    ASSERT_EQ(cycle_length(c), 3);}
-
-TEST(Collatz, test_cycle_4) {
-    const int c = 8;
-    ASSERT_EQ(cycle_length(c), 4);}
+    ASSERT_EQ("10 1 20\n200 100 125\n210 201 89\n1000 900 174\n", w.str());}
+*/
+TEST(Collatz, solve_2) {
+    std::istringstream r("10 1\n200 100\n210 201\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("10 1 20\n200 100 125\n210 201 89\n", w.str());}
 
 /*
 % ls -al /usr/include/gtest/
