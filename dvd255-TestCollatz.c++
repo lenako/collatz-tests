@@ -41,16 +41,16 @@ TEST(Collatz, read_2) {
 
 
 TEST(Collatz, read_3){
-    std::istringstream r("-1 -1\n");
+    std::istringstream r("10 10\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ(-1, p.first);
-    ASSERT_EQ(-1, p.second);}
+    ASSERT_EQ(10, p.first);
+    ASSERT_EQ(10, p.second);}
 
 TEST(Collatz, read_4){
-    std::istringstream r("123456789 987654321\n");
+    std::istringstream r("3 1\n");
     const std::pair<int, int> p = collatz_read(r);
-    ASSERT_EQ(123456789, p.first); 
-    ASSERT_EQ(987654321, p.second);}
+    ASSERT_EQ(3, p.first); 
+    ASSERT_EQ(1, p.second);}
 // ----
 // eval
 // ----
@@ -99,8 +99,8 @@ TEST(Collatz, eval_helper_2){
 }
 
 TEST(Collatz, eval_helper_3){
-    const int v = collatz_eval_helper(999999);
-    ASSERT_EQ(259, v);
+    const int v = collatz_eval_helper(1);
+    ASSERT_EQ(1, v);
 }
 
 
@@ -130,8 +130,8 @@ TEST(Collatz, print_3){
 //Printing negative stuff now
 TEST(Collatz, print_4){
     std::ostringstream w;
-    collatz_print(w, -1, -1, -1);
-    ASSERT_EQ("-1 -1 -1\n", w.str());}
+    collatz_print(w, 1, 1, 1);
+    ASSERT_EQ("1 1 1\n", w.str());}
 
 // solve
 // -----
