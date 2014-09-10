@@ -47,6 +47,23 @@ TEST(Collatz, read_3) {
     ASSERT_EQ( 800, p.first);
     ASSERT_EQ(1000, p.second);}
 
+// ----
+// single cycle
+// ----
+
+TEST(Collatz, cycle_1) {
+   const int length = cycle_length(1);
+   ASSERT_EQ( 1, length);}
+
+TEST(Collatz, cycle_2) {
+   const int length = cycle_length(999999);
+   ASSERT_EQ( 259, length);}
+
+TEST(Collatz, cycle_3) {
+   const int length = cycle_length(8641);
+   ASSERT_EQ( 172, length);}
+
+
 
 // ----
 // eval
