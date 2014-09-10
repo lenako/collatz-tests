@@ -35,22 +35,22 @@ TEST(Collatz, read) {
 }
 
 TEST(Collatz, read_2) {
-	std::istringstream r("1\n");
-	const std::pair<int, int> p = collatz_read(r);
-	ASSERT_EQ(0, p.first);
-	ASSERT_EQ(0, p.second);
+    std::istringstream r("1\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ(0, p.first);
+    ASSERT_EQ(0, p.second);
 }
 
 TEST(Collatz, read_3) {
-	std::istringstream r("10 1\n");
-	const std::pair<int, int> p = collatz_read(r);
-	ASSERT_EQ(10, p.first);
-	ASSERT_EQ(1, p.second);
+    std::istringstream r("10 1\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ(10, p.first);
+    ASSERT_EQ(1, p.second);
 }
 
 TEST(Collatz, read_4) {
-	std::istringstream r("-10 3\n");
-	ASSERT_DEATH(collatz_read(r), "");
+    std::istringstream r("-10 3\n");
+    ASSERT_DEATH(collatz_read(r), "");
 }
 
 // ----
@@ -74,7 +74,7 @@ TEST(Collatz, eval_4) {
     ASSERT_EQ(v, 174);}
 
 TEST(Collatz, eval_5) {
-	ASSERT_DEATH(collatz_eval(-200, 10), "");	
+    ASSERT_DEATH(collatz_eval(-200, 10), "");
 }
 
 // -----
@@ -91,38 +91,51 @@ TEST(Collatz, print) {
 // single cycle length values
 // -----
 
-TEST(Collatz, compute_1) {
-	const int v = compute_cycle_length(1);
-	ASSERT_EQ(v, 1);
-}
-
-TEST(Collatz, compute_2) {
-	const int v = compute_cycle_length(22);
-	ASSERT_EQ(v, 16);
-}
-
 TEST(Collatz, compute_3) {
-	const int v = compute_cycle_length(121);
-	ASSERT_EQ(v, 96);
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length(pointer, 90);
+    ASSERT_EQ(v, 18);
 }
+
+TEST(Collatz, compute_1) {
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length(pointer, 1);
+    ASSERT_EQ(v, 1);
+}
+
+TEST(Collatz, compute_2) {  
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length(pointer, 22);
+    ASSERT_EQ(v, 16);
+}
+
 
 // -------------------
 // cycle length helper
 // -------------------
 
-TEST(Collatz, help_1) {
-	const int v = compute_cycle_length_helper(1, 0);
-	ASSERT_EQ(v, 0);
+TEST(Collatz, help_1) { 
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length_helper(pointer, 1, 1, 0);
+    ASSERT_EQ(v, 1);
 }
 
 TEST(Collatz, help_2) {
-	const int v = compute_cycle_length_helper(2, 999);
-	ASSERT_EQ(v, compute_cycle_length(2) + 998);
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length_helper(pointer, 2, 2, 999);
+    ASSERT_EQ(v, 1001);
 }
 
-TEST(Collatz, help_3) {
-	const int v = compute_cycle_length_helper(121, 1);
-	ASSERT_EQ(v, compute_cycle_length(121));
+TEST(Collatz, help_3) { 
+    int cache[3000] = { 0 };
+    int *pointer = cache;
+    const int v = compute_cycle_length_helper(pointer,121, 121, 1);
+    ASSERT_EQ(v, compute_cycle_length(pointer, 121));
 }
 // -----
 // solve
@@ -136,10 +149,10 @@ TEST(Collatz, solve) {
 }
 
 TEST(Collatz, solve_2) {
-	std::istringstream r("1 1\n");
-	std::ostringstream w;
-	collatz_solve(r, w);
-	ASSERT_EQ("1 1 1\n", w.str());
+    std::istringstream r("1 1\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 1 1\n", w.str());
 }
 
 /*
