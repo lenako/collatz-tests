@@ -1,0 +1,54 @@
+File 'Collatz.c++'
+No executable lines
+No branches
+No calls
+Removing 'Collatz.c++.gcov'
+
+File '/usr/include/c++/4.7/iostream'
+No executable lines
+No branches
+No calls
+Removing 'iostream.gcov'
+
+File '/usr/include/c++/4.7/bits/basic_ios.h'
+No executable lines
+No branches
+No calls
+Removing 'basic_ios.h.gcov'
+
+File '/usr/include/c++/4.7/ostream'
+No executable lines
+No branches
+No calls
+Removing 'ostream.gcov'
+
+File '/usr/include/c++/4.7/bits/stl_pair.h'
+No executable lines
+No branches
+No calls
+Removing 'stl_pair.h.gcov'
+
+File '/usr/include/c++/4.7/bits/move.h'
+No executable lines
+No branches
+No calls
+Removing 'move.h.gcov'
+
+File '/usr/include/c++/4.7/bits/locale_facets.h'
+No executable lines
+No branches
+No calls
+Removing 'locale_facets.h.gcov'
+
+File '/usr/include/c++/4.7/bits/ios_base.h'
+No executable lines
+No branches
+No calls
+Removing 'ios_base.h.gcov'
+
+File '/usr/include/c++/4.7/bits/char_traits.h'
+No executable lines
+No branches
+No calls
+Removing 'char_traits.h.gcov'
+
