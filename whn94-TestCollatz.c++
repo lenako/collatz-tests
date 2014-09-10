@@ -19,6 +19,8 @@
 
 #include "Collatz.h"
 
+#include "Overflow.h"
+
 // -----------
 // TestCollatz
 // -----------
@@ -127,6 +129,7 @@ TEST(Collatz, solve_2) {
 // -----
 // cycle_length
 // -----
+
 TEST(Collatz, cycle_length_1) {
     const int v = collatz_cycle_length(1);
     ASSERT_EQ(1, v);
@@ -146,6 +149,30 @@ TEST(Collatz, cycle_length_4) {
     const int v = collatz_cycle_length(1234);
     ASSERT_EQ(133, v);
 }
+
+// -----
+// overflower
+// -----
+TEST(Collatz, overflower_1) {
+    const int v = overflower(1);
+    ASSERT_EQ(1, v);  
+}
+
+TEST(Collatz, overflower_2) {
+    const int v = overflower(999999);
+    ASSERT_EQ(999999, v);  
+}
+
+TEST(Collatz, overflower_3) {
+    const int v = overflower(113383);
+    ASSERT_EQ(-1, v);  
+}
+
+TEST(Collatz, overflower_4) {
+    const int v = overflower(999167);
+    ASSERT_EQ(-1, v);  
+}
+
 
 /*
 % ls -al /usr/include/gtest/
