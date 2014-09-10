@@ -1,0 +1,301 @@
+// --------------------------------
+// projects/collatz/TestCollatz.c++
+// Copyright (C) 2014
+// Glenn P. Downing
+// --------------------------------
+
+// https://code.google.com/p/googletest/wiki/V1_7_Primer#Basic_Assertions
+
+// --------
+// includes
+// --------
+
+#include <iostream> // cout, endl
+#include <sstream>  // istringtstream, ostringstream
+#include <string>   // ==
+#include <utility>  // pair
+
+#include "gtest/gtest.h"
+
+#include "Collatz.h"
+
+// -----------
+// TestCollatz
+// -----------
+
+// ----
+// read
+// ----
+
+
+TEST(Collatz, read_1) {
+    std::istringstream r("1 10\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 1, p.first);
+    ASSERT_EQ(10, p.second);}
+
+//added tests
+TEST(Collatz, read_2) {
+    std::istringstream r("100 200\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 100, p.first);
+    ASSERT_EQ( 200, p.second);}
+
+TEST(Collatz, read_3) {
+    std::istringstream r("201 210\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 201, p.first);
+    ASSERT_EQ( 210, p.second);}
+
+TEST(Collatz, read_4) {
+    std::istringstream r("900 1000\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 900, p.first);
+    ASSERT_EQ( 1000, p.second);}
+
+TEST(Collatz, read_5) {
+    std::istringstream r("57 104\n");
+    const std::pair<int, int> p = collatz_read(r);
+    ASSERT_EQ( 57, p.first);
+    ASSERT_EQ( 104, p.second);} 
+
+// ------------
+// cycle_length
+// ------------
+
+TEST(Collatz, cycle_length_1) {
+    const int v = collatz_cycle_length(1,1,1);
+    ASSERT_EQ(1, v);
+}
+
+TEST(Collatz, cycle_length_2) {
+    const int v = collatz_cycle_length(5,1,5);
+    ASSERT_EQ(6, v);
+}
+
+TEST(Collatz, cycle_length_3) {
+    const int v = collatz_cycle_length(10,1,10);
+    ASSERT_EQ(7, v);
+}
+
+TEST(Collatz, cycle_length_4) {
+    const int v = collatz_cycle_length(40,1,40);
+    ASSERT_EQ(9, v);
+}
+
+TEST(Collatz, cycle_length_5) {
+    const int v = collatz_cycle_length(80,1,80);
+    ASSERT_EQ(10, v);
+}
+
+TEST(Collatz, cycle_length_6) {
+    const int v = collatz_cycle_length(4,1,4);
+    ASSERT_EQ(3, v);
+}
+
+
+TEST(Collatz, cycle_length_7) {
+    const int v = collatz_cycle_length(3,1,3);
+    ASSERT_EQ(8, v);
+}
+
+TEST(Collatz, cycle_length_8) {
+    const int v = collatz_cycle_length(20,1,20);
+    ASSERT_EQ(8, v);
+}
+ 
+// ----
+// eval
+// ----
+
+TEST(Collatz, eval_1) {
+    const int v = collatz_eval(1, 10);
+    ASSERT_EQ(20, v);}
+
+TEST(Collatz, eval_2) {
+    const int v = collatz_eval(100, 200);
+    ASSERT_EQ(125, v);}
+
+TEST(Collatz, eval_3) {
+    const int v = collatz_eval(201, 210);
+    ASSERT_EQ(89, v);}
+
+TEST(Collatz, eval_4) {
+    const int v = collatz_eval(900, 1000);
+    ASSERT_EQ(174, v);}
+
+TEST(Collatz, eval_5) {
+    const int v = collatz_eval(10, 1);
+    ASSERT_EQ(20, v);}
+
+TEST(Collatz, eval_6) {
+    const int v = collatz_eval(200, 100);
+    ASSERT_EQ(125, v);}
+
+TEST(Collatz, eval_7) {
+    const int v = collatz_eval(210, 201);
+    ASSERT_EQ(89, v);}
+
+TEST(Collatz, eval_8) {
+    const int v = collatz_eval(1000, 900);
+    ASSERT_EQ(174, v);}
+ 
+
+// -----
+// print
+// -----
+
+TEST(Collatz, print_1) {
+    std::ostringstream w;
+    collatz_print(w, 1, 10, 20);
+    ASSERT_EQ("1 10 20\n", w.str());}
+
+// added tests
+TEST(Collatz, print_2) {
+    std::ostringstream w;
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}  
+
+TEST(Collatz, print_3) {
+    std::ostringstream w;
+    collatz_print(w, 201, 210, 89);
+    ASSERT_EQ("201 210 89\n", w.str());}
+
+TEST(Collatz, print_4) {
+    std::ostringstream w;
+    collatz_print(w, 900, 1000, 174);
+    ASSERT_EQ("900 1000 174\n", w.str());}
+
+TEST(Collatz, print_5) {
+    std::ostringstream w;
+    collatz_print(w, 48, 95, 28);
+    // these are random; don't represent actual max cycle length
+    ASSERT_EQ("48 95 28\n", w.str());}
+
+// -----
+// solve
+// -----
+
+TEST(Collatz, solve_1) {
+    std::istringstream r("1 10\n100 200\n201 210\n900 1000\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
+
+// These tests were created using code from the public test repo (RunCollatz.in, .out)
+TEST(Collatz, solve_2) {
+    std::istringstream r("887 384\n916 778\n336 794\n493 387\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("887 384 179\n916 778 179\n336 794 171\n493 387 142\n", w.str());}
+
+TEST(Collatz, solve_3) {
+    std::istringstream r("1000 1\n1 113382\n113384 134378\n134380 138366\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1000 1 179\n1 113382 354\n113384 134378 349\n134380 138366 344\n", w.str());}
+ 
+TEST(Collatz, solve_4) {
+    std::istringstream r("30886 9383\n36915 2777\n38335 7793\n60492 5386\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("30886 9383 308\n36915 2777 324\n38335 7793 324\n60492 5386 340\n", w.str());} 
+
+TEST(Collatz, solve_5) {
+    std::istringstream r("422 938\n455 510\n547 432\n899 943\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("422 938 179\n455 510 142\n547 432 142\n899 943 174\n", w.str());} 
+
+
+
+
+/*
+% ls -al /usr/include/gtest/
+...
+gtest.h
+...
+
+
+
+% locate libgtest.a
+/usr/lib/libgtest.a
+...
+
+
+
+% locate libpthread.a
+...
+/usr/lib32/libpthread.a
+
+
+
+% locate libgtest_main.a
+/usr/lib/libgtest_main.a
+...
+
+
+
+% g++-4.7 -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lgtest_main -lpthread
+
+
+
+% valgrind TestCollatz        >  TestCollatz.out 2>&1
+% gcov-4.7 -b Collatz.c++     >> TestCollatz.out
+% gcov-4.7 -b TestCollatz.c++ >> TestCollatz.out
+
+
+
+% cat TestCollatz.out
+==14225== Memcheck, a memory error detector
+==14225== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==14225== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==14225== Command: TestCollatz
+==14225==
+Running main() from gtest_main.cc
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (31 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (5 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (3 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (3 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (3 ms)
+[ RUN      ] Collatz.print
+[       OK ] Collatz.print (17 ms)
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (10 ms)
+[----------] 7 tests from Collatz (88 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (132 ms total)
+[  PASSED  ] 7 tests.
+==14225==
+==14225== HEAP SUMMARY:
+==14225==     in use at exit: 0 bytes in 0 blocks
+==14225==   total heap usage: 495 allocs, 495 frees, 70,302 bytes allocated
+==14225==
+==14225== All heap blocks were freed -- no leaks are possible
+==14225==
+==14225== For counts of detected and suppressed errors, rerun with: -v
+==14225== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+File 'Collatz.c++'
+Lines executed:100.00% of 17
+Branches executed:100.00% of 18
+Taken at least once:61.11% of 18
+Calls executed:89.47% of 19
+Creating 'Collatz.c++.gcov'
+...
+File 'TestCollatz.c++'
+Lines executed:100.00% of 26
+Branches executed:57.14% of 224
+Taken at least once:28.57% of 224
+Calls executed:54.07% of 209
+Creating 'TestCollatz.c++.gcov'
+...
+*/
